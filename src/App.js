@@ -37,7 +37,7 @@ const App = () => {
     if (name === "grossSalary") {
       setTax(calculateTax(value));
       setSuperContribution(calculateSuper(value, SUPER_RATE));
-      setNetSalary(value - tax);
+      setNetSalary(value - calculateTax(value));
     }
   };
 
